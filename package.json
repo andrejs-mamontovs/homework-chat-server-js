@@ -1,0 +1,17 @@
+{
+  "name": "chat-server",
+  "version": "1.0.0",
+  "description": "homework",
+  "scripts": {
+    "start": "TIMEOUT=30 node ./src/index.js"
+  },
+  "author": "Andrey Mamontov",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "moment": "^2.22.2",
+    "socket.io": "^2.1.1",
+    "winston": "^3.1.0"
+  }
+}
