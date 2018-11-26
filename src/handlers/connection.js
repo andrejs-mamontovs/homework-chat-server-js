@@ -62,11 +62,9 @@ const onConnectionListener = client => {
 const removeUser = id => {
   if (mapTable[id]) {
     const username = mapTable[id].username;
-    console.log("removeUser", username);
     let index = usernames.map(i => i.username).indexOf(username);
     while (index > -1) {
       usernames.splice(index, 1);
-      console.log("removeUser", usernames);
       index = usernames.map(i => i.username).indexOf(username);
     }
     delete mapTable[id];
