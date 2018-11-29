@@ -3,15 +3,20 @@
   "version": "1.0.0",
   "description": "homework",
   "scripts": {
-    "start": "TIMEOUT=30 node ./src/index.js"
+    "start": "nodemon --exec TIMEOUT=30 babel-node ./src/index.js"
   },
   "author": "Andrey Mamontov",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "moment": "^2.22.2",
     "socket.io": "^2.1.1",
     "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "pstree.remy": "^1.1.0"
   }
 }

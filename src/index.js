@@ -7,6 +7,7 @@ const io = require("socket.io")(httpServer);
 const { usernames } = require("./constants/globals");
 const { log } = require("./logger");
 
+// constant;
 const CONNECTION = "connection";
 
 app.use(
