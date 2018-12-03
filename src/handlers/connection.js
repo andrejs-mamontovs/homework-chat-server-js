@@ -1,19 +1,21 @@
-const { usernames, mapTable } = require("../constants/globals");
-const {
+import { usernames, mapTable } from "../constants/globals";
+import {
   DISCONNECT,
   SEND_MESSAGE,
   INCOMMING_MESSAGE,
   LOGIN,
   LOGOFF
-} = require("../constants");
+} from "../constants";
 
-const { log } = require("../logger");
+import { log } from "../logger";
 
 // read timeout value from process env. or set default value;
 const timeoutInSeconds = process.env.TIMEOUT || 20;
 log(`Timeout is set to: ${process.env.TIMEOUT} sec.`);
 
 const onConnectionListener = client => {
+  log(`IP: ${client.request.connection.remoteAddress}`);
+
   let timeIsOutTimer;
 
   const setTimer = () => {
@@ -23,6 +25,8 @@ const onConnectionListener = client => {
       client.emit(LOGOFF, {});
       removeUser(client.id);
     }, timeoutInSeconds * 1000);
+
+    timeIsOutTimer.unref();
   };
 
   log(`A user ${client.id} connected`);

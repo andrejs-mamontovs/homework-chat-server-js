@@ -1,13 +1,5 @@
-const DISCONNECT = "disconnect";
-const SEND_MESSAGE = "send-message";
-const INCOMMING_MESSAGE = "incomming-message";
-const LOGIN = "login";
-const LOGOFF = "logoff";
-
-module.exports = {
-  DISCONNECT,
-  SEND_MESSAGE,
-  INCOMMING_MESSAGE,
-  LOGIN,
-  LOGOFF
-};
+export const DISCONNECT = "disconnect";
+export const SEND_MESSAGE = "send-message";
+export const INCOMMING_MESSAGE = "incomming-message";
+export const LOGIN = "login";
+export const LOGOFF = "logoff";

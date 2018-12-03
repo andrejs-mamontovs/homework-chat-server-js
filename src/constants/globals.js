@@ -1,7 +1,2 @@
-const usernames = [];
-const mapTable = {};
-
-module.exports = {
-  usernames,
-  mapTable
-};
+export const usernames = [];
+export const mapTable = {};
